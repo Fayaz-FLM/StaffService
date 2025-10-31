@@ -1,13 +1,13 @@
 package com.flmhospitals.service.impl;
 
+
 import java.util.ArrayList;
 import java.util.List;
-
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-
 import com.flmhospitals.builder.StaffDtoBuilder;
 import com.flmhospitals.dao.StaffRepository;
+import com.flmhospitals.dto.RegisterStaffDto;
 import com.flmhospitals.dto.StaffDetailsDto;
 import com.flmhospitals.exception.StaffNotFoundException;
 import com.flmhospitals.model.Staff;
@@ -40,4 +40,9 @@ public class StaffServiceImpl implements StaffService {
 		return ResponseEntity.ok(staffDetailsDtoList);
 	}
 
+	@Override
+	public StaffDetailsDto updateStaff(String staffId, RegisterStaffDto dto) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
