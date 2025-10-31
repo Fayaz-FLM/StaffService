@@ -16,7 +16,7 @@ public class RegisterStaffDto {
 	
 	private String lastName;
 	
-	private long phoneNumber;
+	private String phoneNumber;
 	
 	private String role;
 	
@@ -24,7 +24,7 @@ public class RegisterStaffDto {
 	
 	private String dateOfJoining;
 	
-	private String experienceInYears;
+	private int experienceInYears;
 	
 	private String email;
 	

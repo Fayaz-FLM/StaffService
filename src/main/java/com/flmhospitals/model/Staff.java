@@ -43,6 +43,9 @@ public class Staff {
 	@Column(nullable = false)
 	private String gender;
 	
+	@Column(nullable = false)
+	private String email;
+	
 	@Column(length=15,nullable = false )
 	private String phoneNumber;
 	
