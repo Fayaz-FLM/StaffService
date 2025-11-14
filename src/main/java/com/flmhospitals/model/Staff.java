@@ -67,6 +67,9 @@ public class Staff {
 	private int experienceInYears;
 	
 	@Column(nullable = false)
+	private String aadharNumber;
+	
+	@Column(nullable = false)
 	private boolean canLogin;
 	
 	@Column(nullable = false)

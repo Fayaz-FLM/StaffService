@@ -26,6 +26,8 @@ public class RegisterStaffDto {
 	
 	private int experienceInYears;
 	
+	private String aadharNumber;
+	
 	private String email;
 	
 	private StaffAddressDto staffAddressDto;

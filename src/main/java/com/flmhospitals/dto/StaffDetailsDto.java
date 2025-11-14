@@ -28,6 +28,8 @@ public class StaffDetailsDto {
 	
 	private int experienceInYears;
 	
+	private String aadharNumber;
+	
 	private String email;
 	
 	private Specialization specialization;

@@ -1,6 +1,5 @@
 package com.flmhospitals.service.impl;
 
-
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.http.ResponseEntity;
@@ -25,7 +24,8 @@ public class StaffServiceImpl implements StaffService {
 	@Override
 	public ResponseEntity<List<StaffDetailsDto>> searchByStaffFirstNameOrLastName(String name) {
 
-		List<Staff> staffs = staffRepository.findByFirstNameContainingIgnoreCaseOrLastNameContainingIgnoreCase(name, name);
+		List<Staff> staffs = staffRepository.findByFirstNameContainingIgnoreCaseOrLastNameContainingIgnoreCase(name,
+				name);
 
 		List<StaffDetailsDto> staffDetailsDtoList = new ArrayList<>();
 
@@ -42,7 +42,13 @@ public class StaffServiceImpl implements StaffService {
 
 	@Override
 	public StaffDetailsDto updateStaff(String staffId, RegisterStaffDto dto) {
-		// TODO Auto-generated method stub
-		return null;
+		Staff staff = staffRepository.findById(staffId)
+				.orElseThrow(() -> new StaffNotFoundException("Staff ID: " + staffId + " not found"));
+		
+		StaffDtoBuilder.updateStaffEntity(staff, dto);
+		Staff updatedStaff = staffRepository.save(staff);
+		return StaffDtoBuilder.buildStaffDetailsDto(updatedStaff);
+
 	}
+
 }
