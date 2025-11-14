@@ -61,7 +61,7 @@ public class Staff {
 	private Specialization specialization;
 	
 	@Column(nullable = false)
-	private LocalDate dateOfBirth;
+	private LocalDate dateOfJoining;
 	
 	@Column(nullable = false)
 	private int experienceInYears;

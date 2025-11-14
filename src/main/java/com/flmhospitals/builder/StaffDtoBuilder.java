@@ -11,7 +11,8 @@ public class StaffDtoBuilder {
 
 	public static StaffDetailsDto buildStaffDetailsDto(Staff staff) {
 
-		return StaffDetailsDto.builder()
+		return StaffDetailsDto
+				.builder()
 				.staffId(staff.getStaffId())
 				.firstName(staff.getFirstName())
 				.lastName(staff.getLastName())

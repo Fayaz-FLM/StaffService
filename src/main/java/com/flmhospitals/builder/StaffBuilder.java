@@ -22,7 +22,8 @@ public class StaffBuilder {
 		         .staffAddress(buildStaffAdddressFromStaffAddressDto(registerStaffDto.getStaffAddressDto()))
 		         .staffDetails(buildStaffDetailsFromStaffDetailsDto(registerStaffDto.getEmail()))
 		         .build();
-	
+
+
 	}
 	
 	public static StaffAddress buildStaffAdddressFromStaffAddressDto(StaffAddressDto staffAddressDto) {

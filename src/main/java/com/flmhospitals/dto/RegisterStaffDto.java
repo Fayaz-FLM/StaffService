@@ -2,7 +2,6 @@ package com.flmhospitals.dto;
 
 import com.flmhospitals.enums.Specialization;
 import com.flmhospitals.enums.StaffType;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
