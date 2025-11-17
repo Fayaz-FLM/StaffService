@@ -17,13 +17,12 @@ public class StaffBuilder {
 		         .role(registerStaffDto.getRole())
 		         .staffType(registerStaffDto.getStaffType())
 		         .specialization(registerStaffDto.getSpecialization())
-//		         .experienceInYears(Integer.parseInt(registerStaffDto.getExperienceInYears()))
 		         .experienceInYears(registerStaffDto.getExperienceInYears())
 		         .staffAddress(buildStaffAdddressFromStaffAddressDto(registerStaffDto.getStaffAddressDto()))
 		         .staffDetails(buildStaffDetailsFromStaffDetailsDto(registerStaffDto.getEmail()))
 		         .build();
-
-
+		
+		
 	}
 	
 	public static StaffAddress buildStaffAdddressFromStaffAddressDto(StaffAddressDto staffAddressDto) {
@@ -32,7 +31,8 @@ public class StaffBuilder {
 				.landmark(staffAddressDto.getLandmark())
 				.city(staffAddressDto.getCity())
 				.state(staffAddressDto.getState())
-				.pinCode(String.valueOf(staffAddressDto.getPinCode()))
+				.country(staffAddressDto.getCountry())
+				.pinCode(staffAddressDto.getPinCode())
 				.build();
 							
 	}

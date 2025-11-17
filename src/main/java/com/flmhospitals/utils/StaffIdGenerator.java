@@ -13,7 +13,6 @@ public class StaffIdGenerator {
     private final StaffRepository staffRepository;
        
     public StaffIdGenerator(StaffRepository staffRepository) {
-		super();
 		this.staffRepository = staffRepository;
 	}
 
@@ -26,8 +25,10 @@ public class StaffIdGenerator {
         if (lastId != null && lastId.startsWith("FLM-")) {
             String numberPart = lastId.substring(4);
             nextNumber = Integer.parseInt(numberPart) + 1;
+            return String.format("FLM-%05d", nextNumber);
         }
 
         return String.format("FLM-%05d", nextNumber);
     }
+
 }

@@ -4,11 +4,13 @@ import java.time.LocalDate;
 
 import com.flmhospitals.enums.Specialization;
 import com.flmhospitals.enums.StaffType;
+import com.flmhospitals.utils.StaffEntityListner;
 import com.flmhospitals.utils.StaffIdGenerator;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EntityListeners;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.Id;
@@ -28,6 +30,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+@EntityListeners(value = StaffEntityListner.class)
 public class Staff {
 	
 	@Id
@@ -82,16 +85,6 @@ public class Staff {
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "staffDetailsId")
 	private StaffDetails staffDetails;
-	
-	@Transient
-    private StaffIdGenerator staffIdGenerator;
-	
-	 @PrePersist
-	    public void generateStaffId() {
-	        if (this.staffId == null || this.staffId.isEmpty()) {
-	            this.staffId = staffIdGenerator.generateNextStaffId();
-	        }
-	    }
 	
 
 }
