@@ -19,6 +19,10 @@ target/
 *.iml
 *.ipr
 
+#Compiled files
+bin/
+*.class
+
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/

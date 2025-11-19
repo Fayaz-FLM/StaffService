@@ -5,7 +5,6 @@ import java.time.LocalDate;
 import com.flmhospitals.enums.Specialization;
 import com.flmhospitals.enums.StaffType;
 import com.flmhospitals.utils.StaffEntityListner;
-import com.flmhospitals.utils.StaffIdGenerator;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -16,9 +15,7 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
-import jakarta.persistence.PrePersist;
 import jakarta.persistence.Table;
-import jakarta.persistence.Transient;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

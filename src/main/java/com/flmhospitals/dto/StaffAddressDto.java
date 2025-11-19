@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class StaffAddressDto {
 	
-	private String landmark;
+	private String street;
 	
 	private String city;
 	
