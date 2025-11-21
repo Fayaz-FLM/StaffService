@@ -20,6 +20,7 @@ public class StaffBuilder {
 		.staffType(registerStaffDto.getStaffType())
 		.specialization(registerStaffDto.getSpecialization())
 		.experienceInYears(registerStaffDto.getExperienceInYears())
+		.dateOfJoining(registerStaffDto.getDateOfJoining())
 		.staffAddress(buildStaffAdddressFromStaffAddressDto(registerStaffDto.getStaffAddressDto()))
 		.staffDetails(buildStaffDetailsFromStaffDetailsDto(registerStaffDto.getEmail()))
 		.build();
@@ -28,11 +29,13 @@ public class StaffBuilder {
 	
 	public static StaffAddress buildStaffAdddressFromStaffAddressDto(StaffAddressDto staffAddressDto) {
 		
+
 		StaffAddress staffAddress = new StaffAddress();
 		
 		 BeanUtils.copyProperties(staffAddressDto, staffAddress);
 		
 		return staffAddress;
+
 				
 	}
 	

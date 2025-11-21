@@ -21,11 +21,12 @@ import com.flmhospitals.utils.StaffIdGenerator;
 public class StaffServiceImpl implements StaffService {
 
 	private final StaffRepository staffRepository;
-	private final StaffIdGenerator staffIdGenerator;
+	
 
-	public StaffServiceImpl(StaffRepository staffRepository, StaffIdGenerator staffIdGenerator) {
+	public StaffServiceImpl(StaffRepository staffRepository) {
+		
 		this.staffRepository = staffRepository;
-		this.staffIdGenerator = staffIdGenerator;
+		
 	}
 
  @Override
